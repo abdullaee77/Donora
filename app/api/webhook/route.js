@@ -2,13 +2,16 @@ import Stripe from "stripe"
 import connectDb from "@/db/connectDb"
 import Payment from "@/models/Payment"
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY)
-
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY || "")
 export async function POST(req) {
     console.log("✅ WEBHOOK HIT")
     
     await connectDb()
 
+
+if (!process.env.STRIPE_SECRET_KEY || !process.env.STRIPE_WEBHOOK_SECRET) {
+    return new Response("Missing Stripe env variables", { status: 500 })
+}
     const body = await req.text()
     const sig = req.headers.get("stripe-signature")
 
