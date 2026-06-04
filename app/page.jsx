@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <>
       <div className="text-white h-[44vh] gap-4 justify-center items-center flex flex-col">
-        <div className="text-5xl font-bold justify-center items-center gap-2 flex text-center" >Support Creators & Causes You Love <span><img className="invertimg" src="tea.gif" width={88} alt="" /></span></div>
+        <div className="text-5xl font-bold justify-center items-center gap-2 flex text-center" >Support Creators <span><img className="invertimg" src="tea.gif" width={88} alt="" /></span></div>
         <p className="text-center mx-3">
        Connect with supporters, receive donations, and grow your impact. Whether you're a creator, nonprofit, or community project, we're here to help you reach your goals.
         </p>
@@ -19,7 +19,7 @@ export default function Home() {
           </Link>        </div>
       </div>
 
-      <div className=" bg-white h-1 opacity-10"></div>
+      <div className=" bg-white h-1 opacity-10 my-5"></div>
 
       <div className="text-white container mx-auto py-32">
         <h1 className="text-2xl text-center font-bold mb-14">Why Choose Our Platform?</h1>
